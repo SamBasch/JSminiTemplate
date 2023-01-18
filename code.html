@@ -102,7 +102,7 @@
                         
                         //Palindrome Verifier Function 
                         
-                        function PalindromeeChecker(stringToCheck, reversedString) {
+                        function PalindromeChecker(stringToCheck, reversedString) {
                         
                             let message = `Your phrase reversed is ${reversedString}`
                         
@@ -125,9 +125,15 @@
             </div>
             <!--Code Description-->
             <div class="col-12 col-lg-4">
-                <p>The code is structured in one function</p>
-                <h5><code>displayMessage()</code></h5>
-                <p>This function displays the message in a Sweet Alert</p>
+                <p>The code is structured in four function</p>
+                <h5><code>getUserInput()</code></h5>
+                <p>This function serves as the controller or entry point function. It is responsible for retreiving the user input from the web page. It also creates variables from the return functions of the other three functions. It also passes all the parameters to the other three functions.</p>
+                <h5><code>regularExpression()</code></h5>
+                <p>This function is responsible for taking the user input passed by the first function and (via a regular expression) replaces (via 'replace method') all non alphabet characters with nothing, essentially deleting it. It then forces all the characters remaining to become lowercase. It then returns the 'trimmed' string back to the controller function. </p>
+                <h5><code>reverseTheString()</code></h5>
+                <p>This function is responsible for taking the string that was 'trimmed' by the regular expression and reversing that string and assigning it to a new variable called 'reverseArray'. The reversed string is then retruned to the controller function.</p>
+                <h5><code>PalindromeChecker()</code></h5>
+                <p>This final function is responsible for taking the string processed by the regular expression as well as the reversement of that string and comparing them to each other with an if statement thereby checking to see if its a palindrome. Via an if statement you will receive a red "not a palindrome" message or a green successful message. This function, in addition to displaying the failure and success cards, also displays the reversed version of the original phrase you entered.</p>
             </div>
         </div>
     </main>
