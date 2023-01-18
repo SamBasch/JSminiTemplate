@@ -20,8 +20,6 @@ function regularExpression(stringToTrim) {
 
     let txt_new = stringToTrim.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
-    console.log(stringToTrim);
-
     return txt_new;
 
 }
