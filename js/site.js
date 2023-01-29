@@ -42,20 +42,30 @@ function reverseTheString(string) {
 
 function PalindromeeChecker(stringToCheck, reversedString) {
 
-    let message = `Your phrase reversed is ${reversedString}`
+    let alert = document.getElementById('alertBad');
+    alert.classList.remove('alert-success');
+    alert.classList.remove('alert-danger');
 
-    let messageSpot = document.getElementById('resultsGood');
+
+    
+
+    
 
     if (stringToCheck !== reversedString) {
 
-        document.getElementById('alertBad').classList.remove('invisible');
+      alert.classList.add("alert-danger")
+      messageSpot.textContent = "Oh no! It's not a palindrome!";
     } else {
 
-        document.getElementById('alertGood').classList.remove('invisible');
+        alert.classList.add("alert-success")
+        messageSpot.textContent = "Your phrase is a palindrome!";
+
+      
 
     }
+    alert.classList.remove('invisible')
 
-    messageSpot.innerHTML = message;
+    
 }
 
 
