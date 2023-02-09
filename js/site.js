@@ -3,11 +3,40 @@
 function getUserInput() {
     let userInput = document.getElementById('userString').value;
 
-    let trimmedText = regularExpression(userInput);
+    if(userInput != "") {
 
-    let revString = reverseTheString(trimmedText);
 
-    PalindromeeChecker(trimmedText, revString);
+
+                
+        let trimmedText = regularExpression(userInput);
+
+        let revString = reverseTheString(trimmedText);
+
+        PalindromeeChecker(trimmedText, revString);
+
+
+
+    } else {
+
+
+        Swal.fire(
+            {
+                icon: 'error',
+                title: 'Oops!',
+                text: 'please enter a word to check!'
+    
+            }
+        );
+
+
+
+
+    }
+
+   
+    
+
+    
 }
 
 

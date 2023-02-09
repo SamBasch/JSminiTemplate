@@ -1,7 +1,13 @@
 function getValues() {
     let inputString = document.getElementById('userString').value;
-    let result = checkForPalindrome();
-    displayResults(result);
+
+    if(inputString != null) {
+        let result = checkForPalindrome();
+        displayResults(result);
+    } else {
+        
+    }
+
 }
 
 function checkForPalindrome(inputString) {
